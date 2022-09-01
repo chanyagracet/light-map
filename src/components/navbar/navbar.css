@@ -1,0 +1,98 @@
+.pg__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: calc((100vw - 1000px) / 2);
+    padding-right: calc((100vw - 1000px) / 2);
+    padding-top: 2rem;
+}
+
+.pg__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pg__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.pg__navbar-links_container img {
+    margin-right: 2rem;
+    margin-left: 4rem;
+    width: 40px;
+    height: 55px;
+}
+
+.pg__navbar-links_container p,
+.pg__navbar-menu_container p {
+    color: gray;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.pg__navbar-menu {
+    margin-left: 1rem;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.pg__navbar-menu_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    text-align: start;
+    position: absolute;
+    top: 40px;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 1rem;
+    background-color: white
+}
+
+.pg__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+/* changes the layout of the navbar depending on screen size*/
+
+@media screen and (max-width: 1050px) {
+    .pg__navbar-links_container {
+        display: none;
+    }
+
+    .pg__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .pg__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pg__navbar {
+        padding: 2rem;
+    }
+
+    .pg__navbar-menu_container {
+        top: 20px;
+    }
+}
+
